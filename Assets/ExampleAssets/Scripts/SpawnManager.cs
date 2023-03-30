@@ -56,7 +56,7 @@ public class SpawnManager : MonoBehaviour
     {
         if (!isCreated)
         {
-            for (int i = 0; i < 40; i++)
+            for (int i = 0; i < 5; i++)
             {
                 createdObjects[i] = GameObject.Instantiate(objectToSpawn, GeneratedPosition(), transform.rotation * Quaternion.Euler(0.0f, 180.0f, 0.0f));
                 
@@ -78,7 +78,7 @@ public class SpawnManager : MonoBehaviour
     Vector3 GeneratedPosition()
     {
         int x, y, z;
-        x = UnityEngine.Random.Range(min, max);
+        x = UnityEngine.Random.Range(0, max);
         y = -15;
         z = UnityEngine.Random.Range(min, max);
 
